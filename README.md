@@ -91,9 +91,8 @@ $ ./jmeter_stop.sh
 ### 결과파일 로컬로 복사
 ```shell script
 $ master_pod=$(kubectl get po -n "${namespace}" | grep jmeter-master | awk '{print $1}')
-$ working_dir=$(pwd)
 
-$ kubectl cp -n vroong-dev1 "${master_pod}:/tmp/results.csv" "${working_dir}/tmp/results.csv"
+$ kubectl cp -n vroong-dev1 "${master_pod}:/tmp/results.csv" "${HOME}/tmp/results.csv"
 ```
 
 ### 확인
